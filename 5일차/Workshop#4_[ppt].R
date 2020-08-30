@@ -5,7 +5,8 @@
 
 
 #1.데이터셋 읽어오기
-student1 <- read.csv("c:/r/student90.csv", header = T, sep=",",
+student1 <- read.csv("c:/r/student90.csv",
+                     header = T, sep=",",
                      stringsAsFactors = FALSE,
                      na.strings = "")
 student1
@@ -26,26 +27,30 @@ coef(lm1) # >> y = 32.6604 + 0.2247x
 
 
 #4_1. 회귀 계수 값 검증하기
-student2 <- data.frame(height_cm=student1$height_cm, weight_kg=student1$weight_kg)
+student2 <- data.frame(
+  height_cm=student1$height_cm,
+  weight_kg=student1$weight_kg
+  )
 head(student2)
 #키가 198이고 몸무게가 98인 사람의 값을 회귀 계수에 넣어서 검증해보기
 y1 <- 32.6604 + 0.2247 * 198 # 98, 77.151
 y2 <- 32.6604 + 0.2247 * 170 # 77, 70.8594
 
-
 #4_2.회귀 계수 값 검증하기
 attach(student2)
-student2
+head(student2)
 lm1 <- lm(y~x, data=student2)
-summary(lm1) # pvalue:0.008385 < 0.05로 귀무가설 기각, 대립가설 채택
-            # 이 회귀식은 유의하다 >> 학생키로 몸무게 예측이 가능하다.
-            # m3 == lm1
+summary(lm1) # pvalue:0.008385 < 0.05로 
+             # 귀무가설 기각, 대립가설 채택
+             # 이 회귀식은 유의하다 
+             # >> 학생키로 몸무게 예측이 가능하다.
 
 #4_3.회귀 계수 값 검증하기(적합,예측값 구하기)
 #1~4번째 적합(예측)값 확인하기:fitted(lm1)
 fitted(lm1)[1:4]
 #1~4번째 몸무게 계산 값 구하기
-(32.6604 + (0.2246) * (student2$height_cm[1:4])) # >> 같은값 확인
+(32.6604 + (0.2246) * (student2$height_cm[1:4]))
+# >> 같은값 확인
 
 
 #5.잔차 구하기
@@ -59,10 +64,11 @@ NROW(x_cooks.d)
 x_cooks.d[which(x_cooks.d>qf(0.5, df1=2, df2=88))]
 install.packages("car") # car::outlierTest() 함수로 본페로니(Bonferroni) p가 0.05보다 작은 경우 이상치인 것으로 판단한다
 library(car)
-outlierTest(lm1) # 본페로니 p(=0.73) > 0.05 이므로 이상치가 검출되지 않음을 알수 있음
+outlierTest(lm1) # 본페로니 p(=0.73) > 0.05 이므로
+                 # 이상치가 검출되지 않음을 알수 있음
 
 #잔차
-resid <- residuals(lm1) #실제 데이터 값 = 적합된 값 + 잔차차
+resid <- residuals(lm1) #실제 데이터 값 = 적합된 값 + 잔차
 resid[1:4]
 student2$weight_kg[1:4] #대학생 90명 데이터의 1~4번째 실제 몸무게
 fitted(lm1)[1:4] + resid[1:4] #대학생 90명 데이터의 1~4번째 적합값 + 잔차 >> 같음
@@ -75,7 +81,8 @@ shapiro.test(resid(lm1)) #샤피로 윌크 검정을 이용하여 '잔차의 정
 
 
 #6.잔차 제곱합 구하기
-deviance(m3)
+deviance(lm1)
+
 
 
 #7.회귀 계수 신뢰 구간 구하기
@@ -137,6 +144,10 @@ anova(lm1_a, lm1_b)
 
 #RMSE, MAE를 아용한 모델간의 비교
 install.packages("Metrics")
+install.packages("modelr")
+library(modelr)
 library(Metrics)
-rmse(lm1_a, student1)
-mae(lm1_b, student1)
+rmse(lm1_a, student1) # root-mean-squared-error
+rmse(lm1_b, student1) #  root-mean-squared-error
+mae(lm1_b, student1) # mean absolute error
+mae(lm1_b, student1) # mean absolute error
