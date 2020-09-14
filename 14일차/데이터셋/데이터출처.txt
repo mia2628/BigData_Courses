@@ -1,0 +1,5 @@
+제주특별자치도 제주도장소데이터 
+https://www.data.go.kr/data/15004770/fileData.do
+
+제주도_주차장표준정보데이터(제주도 데이터만 수정해서 다시 저장함)
+https://www.data.go.kr/data/15012896/standard.do
