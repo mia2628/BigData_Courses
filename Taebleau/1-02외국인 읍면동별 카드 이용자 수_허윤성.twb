@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0918.1727                               -->
+<workbook original-version='18.1' source-build='2020.3.1 (20203.20.0918.1727)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='P_이용 횟수 초과/이하' datatype='integer' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='70'>
+        <calculation class='tableau' formula='70' />
+        <members>
+          <member value='0' />
+          <member value='70' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='card_usage_emd_foreigner' inline='true' name='federated.0v3mmz51p31v2b1e95zzr1jf72uq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='card_usage_emd_foreigner' name='textscan.0ysw3io1v8d4qt11kxgzy0yrnhqg'>
+            <connection class='textscan' directory='C:/Users/HYS/Desktop/허윤성/2020년/빅데이터 인턴십/제주테크노파크/반출불가데이터/2. 카드데이터' filename='card_usage_emd_foreigner.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ysw3io1v8d4qt11kxgzy0yrnhqg' name='card_usage_emd_foreigner.csv' table='[card_usage_emd_foreigner#csv]' type='table'>
+          <columns character-set='EUC-KR' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='base_year_month' ordinal='0' />
+            <column datatype='string' name='city' ordinal='1' />
+            <column datatype='string' name='area_type' ordinal='2' />
+            <column datatype='string' name='bjd' ordinal='3' />
+            <column datatype='string' name='biz_cd' ordinal='4' />
+            <column datatype='string' name='biz_nm' ordinal='5' />
+            <column datatype='string' name='user_type' ordinal='6' />
+            <column datatype='string' name='tour_type' ordinal='7' />
+            <column datatype='string' name='age' ordinal='8' />
+            <column datatype='string' name='sex' ordinal='9' />
+            <column datatype='integer' name='user_cnt' ordinal='10' />
+            <column datatype='integer' name='use_cnt' ordinal='11' />
+            <column datatype='integer' name='use_amt' ordinal='12' />
+            <column datatype='integer' name='pt_year' ordinal='13' />
+            <column datatype='integer' name='pt_month' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ysw3io1v8d4qt11kxgzy0yrnhqg' name='card_usage_emd_foreigner.csv' table='[card_usage_emd_foreigner#csv]' type='table'>
+          <columns character-set='EUC-KR' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='base_year_month' ordinal='0' />
+            <column datatype='string' name='city' ordinal='1' />
+            <column datatype='string' name='area_type' ordinal='2' />
+            <column datatype='string' name='bjd' ordinal='3' />
+            <column datatype='string' name='biz_cd' ordinal='4' />
+            <column datatype='string' name='biz_nm' ordinal='5' />
+            <column datatype='string' name='user_type' ordinal='6' />
+            <column datatype='string' name='tour_type' ordinal='7' />
+            <column datatype='string' name='age' ordinal='8' />
+            <column datatype='string' name='sex' ordinal='9' />
+            <column datatype='integer' name='user_cnt' ordinal='10' />
+            <column datatype='integer' name='use_cnt' ordinal='11' />
+            <column datatype='integer' name='use_amt' ordinal='12' />
+            <column datatype='integer' name='pt_year' ordinal='13' />
+            <column datatype='integer' name='pt_month' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;EUC-KR&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ko&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₩&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ko_KR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>base_year_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[base_year_month]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>base_year_month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>area_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[area_type]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>area_type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bjd</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bjd]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>bjd</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>biz_cd</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[biz_cd]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>biz_cd</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>biz_nm</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[biz_nm]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>biz_nm</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_type]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>user_type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tour_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tour_type]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>tour_type</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sex]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>sex</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_cnt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_cnt]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>user_cnt</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>use_cnt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[use_cnt]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>use_cnt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>use_amt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[use_amt]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>use_amt</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pt_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pt_year]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>pt_year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pt_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pt_month]</local-name>
+            <parent-name>[card_usage_emd_foreigner.csv]</parent-name>
+            <remote-alias>pt_month</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='C_이용 횟수 초과/이하' datatype='string' name='[Calculation_1469580889869303808]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF SUM([user_cnt])&gt;[Parameters].[매개 변수 1] THEN &quot;많음&quot;&#13;&#10;ELSE &quot;부족&quot; END' />
+      </column>
+      <column datatype='string' name='[Pt Month (그룹)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[pt_month]' new-bin='true'>
+          <bin default-name='false' value='&quot;1분기&quot;'>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+          </bin>
+          <bin default-name='false' value='&quot;2분기&quot;'>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+          </bin>
+          <bin default-name='false' value='&quot;3분기&quot;'>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+          </bin>
+          <bin default-name='false' value='&quot;4분기&quot;'>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+          </bin>
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='card_usage_emd_foreigner.csv' datatype='table' name='[__tableau_internal_object_id__].[card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Area Type' datatype='string' name='[area_type]' role='dimension' type='nominal' />
+      <column caption='Base Year Month' datatype='integer' name='[base_year_month]' role='dimension' type='quantitative' />
+      <column caption='Biz Cd' datatype='string' name='[biz_cd]' role='dimension' type='nominal' />
+      <column caption='Biz Nm' datatype='string' name='[biz_nm]' role='dimension' type='nominal' />
+      <column caption='Bjd' datatype='string' name='[bjd]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Pt Month' datatype='integer' name='[pt_month]' role='dimension' type='ordinal' />
+      <column caption='Pt Year' datatype='integer' name='[pt_year]' role='dimension' type='quantitative' />
+      <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+      <column caption='Tour Type' datatype='string' name='[tour_type]' role='dimension' type='nominal' />
+      <column caption='Use Amt' datatype='integer' name='[use_amt]' role='measure' type='quantitative' />
+      <column caption='Use Cnt' datatype='integer' name='[use_cnt]' role='measure' type='quantitative' />
+      <column caption='User Cnt' datatype='integer' name='[user_cnt]' role='measure' type='quantitative' />
+      <column caption='User Type' datatype='string' name='[user_type]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_1469580889869303808]' derivation='User' name='[usr:Calculation_1469580889869303808:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_1469580889869303808:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;많음&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;부족&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='P_이용 횟수 초과/이하' datatype='integer' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='70'>
+          <calculation class='tableau' formula='70' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='card_usage_emd_foreigner.csv' id='card_usage_emd_foreigner.csv_30EEB099B6FA435DB937C80E3AFAAC35'>
+            <properties context=''>
+              <relation connection='textscan.0ysw3io1v8d4qt11kxgzy0yrnhqg' name='card_usage_emd_foreigner.csv' table='[card_usage_emd_foreigner#csv]' type='table'>
+                <columns character-set='EUC-KR' header='yes' locale='ko_KR' separator=','>
+                  <column datatype='integer' name='base_year_month' ordinal='0' />
+                  <column datatype='string' name='city' ordinal='1' />
+                  <column datatype='string' name='area_type' ordinal='2' />
+                  <column datatype='string' name='bjd' ordinal='3' />
+                  <column datatype='string' name='biz_cd' ordinal='4' />
+                  <column datatype='string' name='biz_nm' ordinal='5' />
+                  <column datatype='string' name='user_type' ordinal='6' />
+                  <column datatype='string' name='tour_type' ordinal='7' />
+                  <column datatype='string' name='age' ordinal='8' />
+                  <column datatype='string' name='sex' ordinal='9' />
+                  <column datatype='integer' name='user_cnt' ordinal='10' />
+                  <column datatype='integer' name='use_cnt' ordinal='11' />
+                  <column datatype='integer' name='use_amt' ordinal='12' />
+                  <column datatype='integer' name='pt_year' ordinal='13' />
+                  <column datatype='integer' name='pt_month' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='읍면동별 외국인 카드 이용자 수'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;</run>
+            <run fontalignment='1'>Sheet Name</run>
+            <run fontalignment='1'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='card_usage_emd_foreigner' name='federated.0v3mmz51p31v2b1e95zzr1jf72uq' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='P_이용 횟수 초과/이하' datatype='integer' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='70'>
+              <calculation class='tableau' formula='70' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0v3mmz51p31v2b1e95zzr1jf72uq'>
+            <column caption='C_이용 횟수 초과/이하' datatype='string' name='[Calculation_1469580889869303808]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF SUM([user_cnt])&gt;[Parameters].[매개 변수 1] THEN &quot;많음&quot;&#13;&#10;ELSE &quot;부족&quot; END' />
+            </column>
+            <column datatype='string' name='[Pt Month (그룹)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[pt_month]' new-bin='true'>
+                <bin default-name='false' value='&quot;1분기&quot;'>
+                  <value>1</value>
+                  <value>2</value>
+                  <value>3</value>
+                </bin>
+                <bin default-name='false' value='&quot;2분기&quot;'>
+                  <value>4</value>
+                  <value>5</value>
+                  <value>6</value>
+                </bin>
+                <bin default-name='false' value='&quot;3분기&quot;'>
+                  <value>7</value>
+                  <value>8</value>
+                  <value>9</value>
+                </bin>
+                <bin default-name='false' value='&quot;4분기&quot;'>
+                  <value>10</value>
+                  <value>11</value>
+                  <value>12</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Bjd' datatype='string' name='[bjd]' role='dimension' type='nominal' />
+            <column-instance column='[bjd]' derivation='None' name='[none:bjd:nk]' pivot='key' type='nominal' />
+            <column-instance column='[user_type]' derivation='None' name='[none:user_type:nk]' pivot='key' type='nominal' />
+            <column caption='Pt Month' datatype='integer' name='[pt_month]' role='dimension' type='ordinal' />
+            <column-instance column='[user_cnt]' derivation='Sum' name='[sum:user_cnt:qk]' pivot='key' type='quantitative' />
+            <column caption='User Cnt' datatype='integer' name='[user_cnt]' role='measure' type='quantitative' />
+            <column caption='User Type' datatype='string' name='[user_type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1469580889869303808]' derivation='User' name='[usr:Calculation_1469580889869303808:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[Pt Month (그룹)]'>
+            <groupfilter function='member' level='[Pt Month (그룹)]' member='&quot;1분기&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:bjd:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([user_cnt])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:bjd:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:user_type:nk]'>
+            <groupfilter function='member' level='[none:user_type:nk]' member='&quot;일본&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:bjd:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:user_type:nk]</column>
+            <column>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[Pt Month (그룹)]</column>
+            <column>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:bjd:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' scope='cols' value='카드 이용자 수' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='fill-above' id='refline8' value='#00000000' />
+            <format attr='fill-below' id='refline8' value='#00000000' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='stroke-color' id='refline4' value='#ffffff' />
+            <format attr='line-pattern-only' id='refline4' value='solid' />
+            <format attr='stroke-size' id='refline4' value='0' />
+            <format attr='line-visibility' id='refline4' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:user_type:nk]' value='이용자구분'>
+              <formatted-text>
+                <run>이용자구분</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[Pt Month (그룹)]' value='기간'>
+              <formatted-text>
+                <run>기간</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[usr:Calculation_1469580889869303808:nk]' />
+              <text column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-pane' value-column='[Parameters].[매개 변수 1]' z-order='1' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[매개 변수 1]' z-order='2' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='max' id='refline10' label-type='automatic' paired-id='refline9' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='9' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='min' id='refline2' label-type='automatic' paired-id='refline3' scope='per-table' symmetric='false' value-column='[Parameters].[매개 변수 1]' z-order='3' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='max' id='refline3' label-type='automatic' paired-id='refline2' scope='per-table' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='3' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='min' id='refline4' label-type='automatic' paired-id='refline5' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='4' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='max' id='refline5' label-type='automatic' paired-id='refline4' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='5' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='min' id='refline6' label-type='automatic' paired-id='refline7' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='6' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='max' id='refline7' label-type='automatic' paired-id='refline6' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='7' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='min' id='refline8' label-type='automatic' scope='per-table' value-column='[Parameters].[매개 변수 1]' z-order='8' />
+            <reference-line axis-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' enable-instant-analytics='true' formula='min' id='refline9' label-type='none' paired-id='refline10' scope='per-pane' symmetric='false' value-column='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]' z-order='9' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0v3mmz51p31v2b1e95zzr1jf72uq].[Pt Month (그룹)] / ([federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:user_type:nk] / [federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:bjd:nk]))</rows>
+        <cols>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[sum:user_cnt:qk]</cols>
+      </table>
+      <simple-id uuid='{53A73037-E3D7-48D7-9DA2-87E45987A35D}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='읍면동별 외국인 카드 이용자 수'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[Pt Month (그룹)]' type='filter' />
+            <card mode='dropdown' param='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:user_type:nk]' type='filter' />
+            <card mode='slider' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[usr:Calculation_1469580889869303808:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:bjd:nk]</field>
+            <field>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[none:pt_month:ok]</field>
+            <field>[federated.0v3mmz51p31v2b1e95zzr1jf72uq].[usr:Calculation_1469580889869303808:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{28504CA8-8AA8-47EC-A012-CB10F8EC7D70}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='읍면동별 외국인 카드 이용자 수' width='192'>
+      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
+      SUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
